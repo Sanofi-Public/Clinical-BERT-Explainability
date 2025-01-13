@@ -1,0 +1,10 @@
+numpy==1.26.4
+pandas==2.2.2
+boto3==1.34.131
+pyarrow==17.0.0
+torch==2.2.0
+tqdm==4.66.5
+transformers==4.44.1
+scipy==1.14.1
+scikit-learn==1.5.1
+captum==0.7.0

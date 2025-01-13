@@ -1,0 +1,13 @@
+model_max_len: 512
+training_label: "label"
+internal_batch_size: 16
+demographic_token_starters:
+  - REGION
+  - GENDER
+  - ETHNICITY
+  - AGE
+  - RACE
+avg_token_type_baseline: false
+
+# if doing multiclass predictions:
+# num_labels: 3

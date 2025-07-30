@@ -70,9 +70,10 @@ class FixedVocabTokenizer(PreTrainedTokenizer):
         self.mask_token_id = self._token_ids.get(self.mask_token, max_id + 5)
 
     def _tokenize(self, text: str, **kwargs):
-        # Remove spaces beside commas and colons, except within words
-        # (This is done because the transformers-interpret package automatically adds spaces between tokens)
-        text = re.sub(r"\s*([:,])\s*", r"\1", text)
+        # Remove spaces comma (,) colon (:) period (.) hyphen (-) and slash (/) except within words
+        # (This is done because the transformers-interpret package
+        # automatically adds spaces between tokens)
+        text = re.sub(r"\s*([,:.\-/])\s*", r"\1", text)
         tokens = text.split(",")
         return tokens
 
